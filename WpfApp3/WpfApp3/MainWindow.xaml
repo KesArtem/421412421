@@ -1,0 +1,70 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu x:Name="m1" MouseEnter="Menu_MouseEnter" Background="White" BorderBrush="Navy" BorderThickness="1">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Желтый" Click="MenuItem_Click_4"/>
+                <MenuItem Header="_Красный" Click="MenuItem_Click_3"/>
+                <MenuItem Header="_Синий" Click="MenuItem_Click" />
+                <MenuItem Header="_Отмена" Click="MenuItem_Click_5" />
+                <Separator />
+                <MenuItem Header="_Закрыть" Click="MenuItem_Click_2" />
+            </MenuItem>
+            <MenuItem Header="_О программе" Click="MenuItem_Click_1" />
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Margin="0,387,0,0">
+            <TextBlock x:Name="SB1"/>
+        </StatusBar>
+        <ToolBar MouseEnter="Menu_MouseEnter" Margin="181,0,0,385">
+            <Button Click="MenuItem_Click_4">
+                <Label>
+                    <Label.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Yellow"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+            </Button>
+            <Separator/>
+            <Button Click="MenuItem_Click_3">
+                <Label>
+                    <Label.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Red"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+            </Button>
+            <Separator/>
+            <Button Click="MenuItem_Click">
+                <Label>
+                    <Label.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Blue"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+            </Button>
+            <Separator/>
+            <Button Click="MenuItem_Click_5">
+                <Label>
+                    <Label.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+            </Button>
+            <Separator/>
+            <Button Click="MenuItem_Click_2" Width="77">
+                <Label Content="ЗАКРЫТЬ" Width="77" Height="27"/>
+            </Button>
+        </ToolBar>
+    </Grid>
+</Window>
