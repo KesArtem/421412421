@@ -19,7 +19,7 @@
             <MenuItem Header="_О программе" Click="MenuItem_Click_1" />
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" Margin="0,387,0,0">
-            <TextBlock x:Name="SB1"/>
+            <TextBlock x:Name="SB1" Text="{Binding ElementName=m1}"/>
         </StatusBar>
         <ToolBar MouseEnter="Menu_MouseEnter" Margin="181,0,0,385">
             <Button Click="MenuItem_Click_4">

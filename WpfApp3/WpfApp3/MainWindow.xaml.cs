@@ -32,7 +32,7 @@ namespace WpfApp3
 
         private void Menu_MouseEnter(object sender, MouseEventArgs e)
         {
-            //SB1.Tex;
+            //SB1.Text;
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
