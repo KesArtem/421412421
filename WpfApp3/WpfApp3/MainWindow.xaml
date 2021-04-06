@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+
         <Menu x:Name="m1" MouseEnter="Menu_MouseEnter" Background="White" BorderBrush="Navy" BorderThickness="1">
             <MenuItem Header="_Файл">
                 <MenuItem Header="_Желтый" Click="MenuItem_Click_4"/>
@@ -63,8 +64,24 @@
             </Button>
             <Separator/>
             <Button Click="MenuItem_Click_2" Width="77">
-                <Label Content="ЗАКРЫТЬ" Width="77" Height="27"/>
+                <Label Content="ЗАКРЫТЬ" Width="67" Height="27"/>
+            </Button>
+            <Button Content="Рисование" Height="29" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+            <Button Content="Отменить рисование" Height="29" VerticalAlignment="Top" Width="133" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.255"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
             </Button>
         </ToolBar>
+        <InkCanvas x:Name="i1" Margin="0,39,0,32" IsEnabled="False">
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes Color="Red" Height="10" Width="2"/>
+            </InkCanvas.DefaultDrawingAttributes>
+        </InkCanvas>
     </Grid>
 </Window>

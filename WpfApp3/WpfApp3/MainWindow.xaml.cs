@@ -59,5 +59,16 @@ namespace WpfApp3
         {
             m1.Background = Brushes.White;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            i1.IsEnabled=true;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            i1.IsEnabled = false;
+            i1.Strokes.Clear();
+        }
     }
 }
